@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS PART 2</title>
+      <style>
+    .fraction {
+      display: inline-block;
+      text-align: center;
+    }
+    .numerator {
+      display: block;
+    }
+    .denominator {
+      display: block;
+      border-top: 1px solid black;
+      margin-top: 2px;
+    }
+  .equal {
+  display: inline-block;     /* keep it inline */
+      transform: translateY(-5px); /* move up a little */
+      padding: 0 8px;
+      font-size: 20px;
+}
+ /* Q-2 Solution  */
+img {
+  border: 2px dashed #555;   /* dashed border */
+  border-radius: 12px;       /* rounded rectangle corners */
+  filter: grayscale(100%);   /* make the image grayscale */
+}
+
+/* Q-2 Solution */
+
+/* Default font size */
+
+body {
+  font-size: 16px;
+}
+
+/* When screen width is 800px or less */
+@media (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* When screen width is 500px or less */
+@media (max-width: 500px) {
+  body {
+    font-size: 12px;
+  }
+}
+ /* Question 4  */
+.btn1{cursor: pointer;}
+.btn2{cursor : help;}
+.btn3{cursor : wait;}
+.btn4{cursor : not-allowed;}
+.btn5{cursor : crosshair;}
+.btn6{cursor : zoom-in;}
+.btn7{cursor : grab;}
+
+/* Question 5 */
+.q5 {
+  padding: 20px;              /* space inside the box */
+  margin: 15px;               /* space outside the box */
+  border: 3px solid #333;     /* visible border */
+  background-color: #f0f0f0;  /* light background for clarity */
+}
+
+
+/* Question 6  */
+ span:hover {
+      font-size: 20px;
+      color: red;
+      font-family: "Courier New", monospace;
+    }
+
+    /* Question 7  */
+        .move {
+      width: 100px;
+      height: 100px;
+      background: lightblue;
+      transform: translate(50px, 30px);
+    }
+
+    /* Question 8 */
+
+    .tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Tooltip text (hidden by default) */
+.tooltip::after {
+  content: attr(data-tip);    /* use custom text from data-tip attribute */
+  position: absolute;
+  bottom: 125%;               /* position above the element */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 14px;
+  opacity: 0;                 /* hidden initially */
+  pointer-events: none;       /* avoid blocking cursor */
+  transition: opacity 0.3s;
+}
+
+/* Show tooltip on hover */
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+/* Question 9 */
+ .clipped {
+      position: absolute;               /* clip works only with positioned elements */
+      clip: rect(0px, 150px, 150px, 0px); /* top, right, bottom, left */
+    }
+
+    /* Question 10 */
+    
+    /* Question 10 */
+    .dropcap {
+      font-size: 22px;
+      line-height: 1.5;
+      max-width: 600px;
+      color: #222;
+    }
+
+    .dropcap::first-letter {
+      font-size: 80px;
+      float: left;
+      line-height: 1;
+      padding-right: 8px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    /* Question 11 */
+      .half-rounded {
+      width: 250px;
+      height: 150px;
+      background-color: lightblue;
+
+      /* Top-left and bottom-right corners rounded */
+      border-top-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+
+      /* Keep other two corners sharp */
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    /* Question 12 */
+        .bg-box {
+      width: 400px;
+      height: 250px;
+      border: 2px solid #333;
+
+      background-image: url("your-image.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; /* scales to fit */
+    }
+
+    /* Question 13 */
+
+     .flex-container {
+      display: flex;
+      flex-direction: row-reverse;  /* items arranged in reverse order horizontally */
+      border: 2px solid #333;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    .flex-item {
+      background: lightblue;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    /* Question 14 */
+     .my-div {
+      width: 300px;
+      height: 200px;
+      border: 30px solid transparent;
+      border-image: url("guvi1.png") 30 stretch;
+    }
+
+
+    /* Question 15 */
+      .rounded-div {
+      width: 300px;
+      height: 200px;
+      background: lightblue;
+      border: 2px solid #333;
+
+      border-bottom-left-radius: 25px;
+    }
+
+    /* Question 16 */
+    #special-img {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+#special-img:hover {
+  opacity: 1;
+}
+
+/* Question 17 */
+.q17-wrap {
+  position: relative;        /* creates positioning context */
+  padding-right: 220px;      /* reserve space for the right box (box width + gap) */
+  margin-bottom: 20px;
+}
+
+.righerdiv {
+  width: 200px;
+  height: 100px;
+  background: lightgreen;
+  position: absolute;        /* positioned relative to .q17-wrap */
+  right: 0;
+  top: 0;                    /* aligns with the H2 line */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #333;
+}
+
+/* (Optional) Stack on small screens */
+@media (max-width: 600px) {
+  .q17-wrap { padding-right: 0; }
+  .righerdiv { position: static; margin-top: 10px; }
+}
+
+/* Question 18 */
+.scroll-box {
+  width: 300px;
+  height: 150px;
+  border: 2px solid black;
+  overflow: auto;  /* Adds scrollbar when needed */
+  margin-left: 20px; /* Keeps it aligned with h2, not floating away */
+}
+
+
+/* Question 19 */
+.gradient-box {
+  width: 300px;
+  height: 200px;
+  border: 2px solid black;
+  background: linear-gradient(to bottom, white, red, blue, green);
+  color: white;
+  padding: 10px;
+}
+
+/* Question 20  */
+.rotate-box {
+  width: 200px;
+  height: 100px;
+  background-color: lightcoral;
+  border: 2px solid black;
+  padding: 10px;
+  transform: rotate(45deg);
+}
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+    <!-- <p>δ <sup>2</sup>u /δ<sup>2</sup>t = c<sup>2</sup>δ <sup>2</sup>u / δ x<sup>2</sup> </p>  -->
+     <h2>Question 1</h2>
+  <p>
+    <span class="fraction">
+      <span class="numerator">δ²u</span>
+      <span class="denominator">δt²</span>
+    </span>
+
+    <span class="equal"> =  </span>
+    <span class="fraction">
+       <span class="numerator">  c²  δ²u</span>
+      <span class="denominator">δx²</span>
+    </span>
+  </p>
+
+   <h2>Question 2</h2>
+   <img src="guvi.jpg" alt="guvi img">
+
+
+   <h2>Question 3 </h2>
+   <p>Write a media rule to change only the font size of web page when it's resized</p>
+   <P>It has been implemented in style tag</P>
+
+   <h2>Question 4 </h2>
+   <p>Display different types of Cursor</p>
+
+
+      <input type="button" class="btn1" value="pointer">
+      <input type="button" class="btn2" value="help">
+      <input type="button" class="btn3" value="wait"> 
+      <input type="button" class="btn4" value="not-allowed">
+      <input type="button" class="btn5" value="crosshari">
+      <input type="button" class="btn6" value="zoom-in ">
+       <input type="button" class="btn7" value="grab"> 
+
+
+       <h2>Question 5</h2>
+       <p>Write a CSS class that meets the Box Model requirement for all the div tags in your page.
+
+        Use certain properties padding, margin, border.</p>
+       <div class="q5">This is a div using the Box Model</div>
+  <div class="q5">Another div with margin, padding, and border</div>
+
+
+  <h2>Questin 6</h2>
+  <p>Write a CSS class to change size of font, color font family when mouse moves over of span tag in your webpage.</p>
+    <p>
+    This is normal text, but 
+    <span>hover over me!</span>
+  </p>
+
+  <h2>Question 7</h2>
+  <p>Write a CSS 2D rule with translate() property to move an element.</p>
+
+  <div class="move">Moved Box</div>
+  <br>
+  <br>
+
+  <h2>Question 8</h2>
+  <p>Define a CSS class to show tooltip when mouse moved over the elements.</p>
+   <p>
+    Hover over this <span class="tooltip" data-tip="This is a tooltip!"><b>"text"</b></span> to see tooltip.
+  </p>
+
+  <h2>Question 9</h2>
+  <p>For the below shown image apply clip property with values of right & bottom and display the output.</p>
+  <img src="guvi1.png" alt="guvi_img" class="clipped" width="300" height="200">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <h2>Question 10</h2>
+  <p>Design the img using html & css</p>
+  <p class="dropcap">
+    Drop caps can be used to add emphasis to blocks of text but know they can affect readability.
+  </p>
+
+
+  <h2>Question 11</h2>
+  <p>Design the below img using html and css</p>
+   <div class="half-rounded"></div>
+
+   <h2>Question 12</h2>
+   <p>Use CSS to set a background image should be centered and should not repeat.</p>
+   <div class="bg-box"></div>
+   <p><b>Since i am using the body i have made it inside the div element and it cannot be repeated </b></p>
+
+   <h2>Question 13</h2>
+   <p>Write CSS rules to set the direction of the flexible items inside the <div></div> element in reverse order.</p>
+
+     <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+  </div>
+
+  <h2>Question 14</h2>
+  <p>Give the div  element an image border using the image "border.png". Slice the image at 30px and stretch it</p>
+    <div class="my-div"></div>
+
+    <h2>Question 15</h2>
+    <p>Give the div element a rounded corner (25px radius) on the bottom left side</p>
+     <div class="rounded-div"></div>
+
+     <h2>Question 16</h2>
+     <p>Remove the transparency/opacity of the <img> element when the user hovers over it with the mouse pointer</p>
+     <img src="guvi.jpg" alt="Sample Image" width="300" id="special-img">
+
+   <h2>Question 17</h2>
+<div class="q17-wrap">
+  <p>Position the &lt;div&gt; element all the way to the right using absolute positioning.</p>
+  <div class="righerdiv">I'm on the right!</div>
+</div>
+
+<h2>Question 18</h2>
+<p>Add a scrollbar to the &lt;div&gt; element.</p>
+<div class="scroll-box">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut
+     perspiciatis unde omnis iste natus error sit voluptatem accusantium
+     doloremque laudantium.</p>
+  <p>More content... More content... More content...</p>
+  <p>More content... More content... More content...</p>
+  <p>More content... More content... More content...</p>
+  <p>More content... More content... More content...</p>
+</div>
+
+<h2>Question 19</h2>
+<p>Set a linear gradient background for the &lt;div&gt; element, going from the top to bottom, transitioning from "white" to "red" to "blue" to "green".</p>
+
+<div class="gradient-box">
+  <p>This div has a vertical gradient background.</p>
+</div>
+
+<h2>Question 20</h2>
+<p>With the transform property, rotate the &lt;div&gt; element 45 degrees.</p>
+    <br>
+    <br>
+    <br>
+   
+    <div class="rotate-box">
+  <p>This div is rotated 45 degrees.</p>
+</div>
+
+</body>
+</html>

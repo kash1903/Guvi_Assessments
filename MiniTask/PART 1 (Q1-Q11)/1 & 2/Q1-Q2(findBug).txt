@@ -1,0 +1,51 @@
+ Question 1 : fix the bug in the below snippet ?
+
+ Ans 1: 
+
+     <html lang="en">
+    <head>
+         
+         // closed the title tag 
+        <title>Document</title>  
+    </head>
+
+    // body should be outside the head tag 
+     <body>
+                guvi
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        
+        // fixed the closing tag of div 
+        </div>
+            <div>
+                Guvi Geek Network
+            </div>
+        </body>
+    </html>
+
+
+    Question 2: Try the below one 
+
+    Ans 2: 
+
+    <html lang="en">
+    <head>
+       // Closed the title tag 
+        <title>Document</title>
+           
+    </head>
+
+    // Body should be outside the head 
+     <body>
+                guvi
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+        // Closed the div tag 
+        </div>
+            <div>
+                Guvi Geek Network
+            </div>
+        </body>
+    </html>
+
