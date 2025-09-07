@@ -1,0 +1,59 @@
+package guvi_JDBC;
+
+import java.sql.*;
+import java.util.Scanner;
+
+public class InsertData {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3307/guvi_Task";
+        String username = "root";
+        String password = ""; // put your MySQL password if set
+
+        Scanner sc = new Scanner(System.in);
+        try {
+            // Load JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // Establish connection
+            Connection con = DriverManager.getConnection(url, username, password);
+            System.out.println("✅ Connected to database!");
+
+            // Take input from user
+            System.out.print("Enter employee code: ");
+            String ecode = sc.nextLine();
+
+            System.out.print("Enter employee Name: ");
+            String ename = sc.nextLine();
+            
+            System.out.print("Enter employee Page");
+            int epage = sc.nextInt();
+
+            System.out.print("Enter salary: ");
+            double sal = sc.nextDouble();
+
+            // Prepare SQL Insert statement
+            String insertQuery = "INSERT INTO updatedEmployee (empcode, empname, empage,esalary) VALUES (?, ?, ?,?)";
+            PreparedStatement insertStmt = con.prepareStatement(insertQuery);
+            insertStmt.setString(1, ecode);
+            insertStmt.setString(2, ename);
+            insertStmt.setInt(3, epage);
+            insertStmt.setDouble(4,sal);
+
+            // Execute insert
+            int rowsInserted = insertStmt.executeUpdate();
+            if (rowsInserted > 0) {
+                System.out.println("✅ Record inserted successfully!");
+            }
+
+            // Close resources
+            insertStmt.close();
+            con.close();
+            sc.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+}
+
